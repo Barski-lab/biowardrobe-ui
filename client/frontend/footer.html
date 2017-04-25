@@ -1,0 +1,62 @@
+<!-- start: FOOTER -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <a class="logo" href="index.html"> <img alt="biowardrobe" src="images/logos.jpg"> </a>
+                <p class="padding-top-20">
+                    BioWardrobe Experiment Management System, which allows users to store, visualize and analyze epigenomic and transcriptomic next-generation sequencing data using a biologist-friendly, web-based graphical user interface without the need for programming expertize. BioWardrobe is open source and released under the terms of the GNU General Public License v2 (GPL).
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h4 class="margin-bottom-25">Latest News</h4>
+                <div class="twitter margin-bottom-15" *ngFor="let _t of _tweets">
+                    <i class="fa fa-comments-o pull-left"></i>
+                    <p class="padding-left-30" [innerHTML]="getTweet(_t)">
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4 class="margin-bottom-25">Follow Us</h4>
+                <div class="social-icons">
+                    <ul>
+                        <li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
+                            <a target="_blank" href="https://twitter.com/biowardrobe"> Twitter </a>
+                        </li>
+                        <li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
+                            <a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
+                        </li>
+                        <li class="social-google tooltips" data-original-title="Google" data-placement="bottom">
+                            <a target="_blank" href="#" data-original-title="Google"> Google + </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        &copy; Copyright <span class="current-year"></span>. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <nav id="sub-menu">
+                        <ul>
+                            <li>
+                                <a href="#"> FAQ's </a>
+                            </li>
+                            <li>
+                                <a href="#"> Sitemap </a>
+                            </li>
+                            <li>
+                                <a href="#"> Contact </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+

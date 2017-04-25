@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "isolatedModules": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "ace",
+      "node",
+      "jasmine",
+      "electron"
+    ]
+  },
+  "filesGlob": [
+    "client/**/*.ts",
+    "server/**/*.ts",
+    "common/**/*.ts",
+    "typings/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "electron",
+    "dist",
+    "build",
+    "src/**/*.spec.ts",
+    "src/**/*.e2e.ts",
+    "e2e"
+  ],
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit": true
+  }
+}

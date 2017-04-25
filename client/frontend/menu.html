@@ -1,0 +1,45 @@
+<header class="small-header" [class.search-open]="searchVisible">
+    <div class="navbar navbar-default">
+        <!-- start: TOP NAVIGATION CONTAINER -->
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand  margin-top-5"><img alt="biowardrobe" height="90%" src="/images/logos.jpg"></a>
+                <a class="pull-right menu-toggler visible-xs-block mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="ti-view-grid"></i>
+                </a>
+
+            </div>
+            <!-- start: NAVBAR -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- start: MENU from DB -->
+                    <template ngFor let-m [ngForOf]="menus">
+                        <li [class.dropdown]="m.items" routerLinkActive="active" [ngSwitch]="m.items||0">
+                            <a  *ngSwitchCase="0" [routerLink]="[ './', m.name ]"> {{m.name}} </a>
+                            <a  *ngSwitchDefault data-toggle="dropdown" class="dropdown-toggle"> {{m.name}} </a>
+                            <ul *ngSwitchDefault class="dropdown-menu">
+                                <li *ngFor="let mi of m.items" routerLinkActive="active">
+                                    <a [routerLink]="['./', mi.name ]" > {{mi.name}} </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </template>
+                    <!-- end: MENU -->
+                    <!--<li class="menu-search hidden-sm hidden-xs">-->
+                        <!--<a (click)="searchToggle()"> <i class="fa fa-search"></i> </a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <!-- end: NAVBAR -->
+        </div>
+        <!-- end: TOP NAVIGATION CONTAINER -->
+        <!--<div id="overlay-search" *ngIf="searchVisible">-->
+            <!--<form >-->
+                <!--<input [sdFocus]="searchVisible" type="text" placeholder="Type &amp; Hit Enter..." value="" class="form-control">-->
+            <!--</form>-->
+            <!--<a class="pull-right margin-right-20 close-search mobile-button" (click)="searchToggle()"> <i class="fa fa-close"></i> </a>-->
+        <!--</div>-->
+    </div>
+</header>
+

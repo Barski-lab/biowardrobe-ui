@@ -1,0 +1,37 @@
+<section class="container-fluid container-fullw bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="over-title margin-bottom-15">Epigenomics Data Analysis Core <span class="text-bold">pricing</span></h5>
+                <p>
+
+                </p>
+                <div class="pricing-table pricing-blue">
+                    <div class="col-lg-3 col-md-3 col-xs-6" *ngFor="let p of pricing">
+                        <ul class="plan" [ngClass]="{'featured':p.featured}">
+                            <li class="plan-name">
+                                {{p.name}}
+                            </li>
+                            <li class="plan-price">
+                                <h3> {{currency}}{{splitPrice(p.price,0)}}
+                                    <span class="price-cents">{{splitPrice(p.price,1)}}</span>
+                                    <span class="price-month">{{p.pricecomment}}</span>
+                                </h3>
+                            </li>
+                            <template ngFor let-f [ngForOf]="p.features">
+                                <li *ngIf="!!f.f || !!f.d">
+                                    <strong>{{f.f}}</strong> {{f.d}}
+                                </li>
+                            </template>
+                            <!--<li class="plan-action">-->
+                                <!--<a href="#" class="btn btn-blue btn-lg disabled"> Signup </a>-->
+                                <!--&lt;!&ndash;<ng-content></ng-content>&ndash;&gt;-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

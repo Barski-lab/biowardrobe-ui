@@ -1,0 +1,23 @@
+<section class="container-fluid container-fullw">
+    <div class="container">
+        <div data-appears-group-delay="0" data-appears-delay-increase="80">
+            <div class="row" *ngFor="let row of rows">
+                <div class="col-sm-4" *ngFor="let c of row">
+                    <div data-appears-class="fadeIn" class="padding-top-40 padding-bottom-40">
+                        <div class="pull-left" data-appears-class="bounceIn">
+                            <i class="text-primary fa {{c.faicon}} fa-3x"></i>
+                        </div>
+                        <div>
+                            <div class="padding-left-50">
+                                <h4 class="margin-bottom-25 text-uppercase">{{c.feature}}</h4>
+                                <p>
+                                    {{c.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
