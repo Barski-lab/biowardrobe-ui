@@ -5,8 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
-// import { Ng2BootstrapModule } from 'ngx-bootstrap';
+import { Ng2BootstrapModule } from 'ngx-bootstrap';
 
 import { SciDAPFrontendAppModule } from './frontend/app';
 
