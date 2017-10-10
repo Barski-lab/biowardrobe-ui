@@ -484,7 +484,7 @@ window.FrontendMain = function() {
                     pagination : _this.find('.swiper-pagination'),
                     paginationClickable : _this.find('.swiper-pagination'),
                     loop : true,
-                    autoplay : 3000,
+                    autoplay : 6000,
                     nextButton : _this.find('.swiper-button-next'),
                     prevButton : _this.find('.swiper-button-prev')
 
@@ -500,7 +500,7 @@ window.FrontendMain = function() {
                     pagination : _this.find('.swiper-pagination'),
                     paginationClickable : _this.find('.swiper-pagination'),
                     loop : true,
-                    autoplay : 3000,
+                    autoplay : 6000,
                     direction : 'vertical'
 
                 });
@@ -691,9 +691,9 @@ window.FrontendMain = function() {
         $('#portfolio').slick({
                                   dots : true,
                                   infinite : false,
-                                  speed : 300,
-                                  slidesToShow : 3,
-                                  slidesToScroll : 3,
+                                  speed : 30,
+                                  slidesToShow : 2,
+                                  slidesToScroll : 2,
                                   responsive : [{
                                       breakpoint : 992,
                                       settings : {
@@ -759,9 +759,11 @@ window.FrontendMain = function() {
         scrollTopHandler: scrollTopHandler,
         sliderCaptionHandler: sliderCaptionHandler,
         setParallaxHandler: setParallaxHandler,
+        swiperHandler: swiperHandler,
+        homeCarouselHandler: homeCarouselHandler,
 
         init : function() {
-            //sliderCaptionHandler();
+            sliderCaptionHandler();
             windowScrollHandler(); //the most slow function
             //resizeHandler();
             //shrinkHeaderHandler();
@@ -773,13 +775,13 @@ window.FrontendMain = function() {
             //toggleClassHandler();
             //animationNumberHandler();
             //appearAnimationHandler();
-            //setParallaxHandler();
+            setParallaxHandler();
             fullHeightHandler();
             //animatedProgressbarHandler();
             //magnificPopupHandler();
-            //swiperHandler();
+            swiperHandler();
             homeSliderHandler();
-            //homeCarouselHandler();
+            homeCarouselHandler();
 
         }
     };

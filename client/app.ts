@@ -6,8 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { Ng2BootstrapModule } from 'ng2-bootstrap';
+// import { Ng2BootstrapModule } from 'ngx-bootstrap';
 
-// import { AuthModule } from './auth/auth.module';
 import { SciDAPFrontendAppModule } from './frontend/app';
 
 const routes: Routes = [

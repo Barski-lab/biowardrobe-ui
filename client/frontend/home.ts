@@ -17,7 +17,12 @@ declare let FrontendMain;
 export class SciDAPHome implements OnInit {
 
     ngOnInit() {
+        // FrontendMain.homeCarouselHandler();
+        // FrontendMain.setParallaxHandler();
+
+        FrontendMain.sliderCaptionHandler();
         FrontendMain.fullHeightHandler();
+        FrontendMain.swiperHandler();
         FrontendMain.homeSliderHandler();
     }
     onScroll(event) {
